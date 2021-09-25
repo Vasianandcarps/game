@@ -17,13 +17,19 @@ while (n > 0) {
     str += "| ";
   }
   alert(n + str);
-  if (n <= 0) {
+	alert("my turn!");
+  let rand = Math.floor(Math.random() * 3) + 1;
+	alert(rand);
+n -= rand;
+   str = " ";
+  for (let i = 0; i < n; i++) {
+    str += "| ";
+  }
+	if (n <= 0) {
     alert("You win!");
     break;
-  } else {
+  } else if (n <= rand){
     alert("I win!");
     break;
   }
-  alert("my turn!");
-  let rand = Math.floor(Math.random() * 3) + 1;
-}
+	}
